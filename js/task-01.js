@@ -1,6 +1,6 @@
 // Определяем ссылку на блок ul#categories
 const listEl = document.querySelector("#categories");
-
+l
 // Задание №1 Определяем количество категорий и выводим в консоль
 const arrayFromList = listEl.children;
 console.log("Number of Categories: ", arrayFromList.length);

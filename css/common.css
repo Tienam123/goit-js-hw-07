@@ -11,7 +11,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
+  background-color: rgb(42, 39, 39);
   color: #ffffff;
   line-height: 1.5;
 }
