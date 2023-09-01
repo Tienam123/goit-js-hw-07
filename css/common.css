@@ -43,3 +43,8 @@ button {
 .gallery__img {
   border-radius: 20px;
 }
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
