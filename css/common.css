@@ -2,49 +2,73 @@
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
-}
 body {
-  margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(42, 39, 39);
-  color: #ffffff;
-  line-height: 1.5;
-}
-.update::before {
-  content: "✅";
-  position: absolute;
-  transform: translateX(-150%);
-}
-h2 {
-  color: #ffff00;
-}
-a {
-  color: white;
-}
-a:visited {
-  color: #ffff00;
+  font-family: sans-serif;
+  background-color: #181c1f;
+  color: #bdd1d4;
+  margin: 2rem;
 }
 
-input {
-  padding: 8px;
-  font: inherit;
-}
-
-button {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.gallery__img {
-  border-radius: 20px;
-}
-#boxes {
+header {
+  margin: 2rem 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+header img {
+  width: 3rem;
+  object-fit: contain;
+}
+
+header h1 {
+  margin: 0;
+  color: #f3e248;
+}
+
+header p {
+  margin: 0;
+  color: #dbd7b1;
+}
+
+#tabs {
+  max-width: 48rem;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+#tabs menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.25rem;
+}
+
+#tabs button {
+  font: inherit;
+  font-size: 0.85rem;
+  background-color: #282f33;
+  border: none;
+  border-bottom-color: #f3e248;
+  color: #e0eff1;
+  border-radius: 4px 4px 0 0;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+#tabs button:hover,
+#tabs button.active {
+  background-color: #f3e248;
+  color: #273133;
+}
+
+#tab-content {
+  background-color: #2d3942;
+  border-radius: 0 4px 4px 4px;
+  padding: 1rem;
+}
+
+#tab-content li {
+  margin: 0.75rem 0;
 }
