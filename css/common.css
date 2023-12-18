@@ -46,7 +46,7 @@ header p {
   gap: 0.25rem;
 }
 
- button {
+.button,button {
   font: inherit;
   font-size: 0.85rem;
   background-color: #282f33;
@@ -58,9 +58,14 @@ header p {
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
+.button {
+  border-radius: 4px;
+}
 
+.button:hover,
 button:hover,
-button.active {
+.button.active,
+button.active{
   background-color: #f3e248;
   color: #273133;
 }

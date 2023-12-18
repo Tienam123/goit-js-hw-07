@@ -6,14 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 4</title>
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      .button {
+        border-radius: 4px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      #value {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      #counter {
+        margin-top: 50px;
+      }
+    </style>
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+  <header>
+    <img src="js-logo-xs.png" alt="JavaScript logo" />
+    <div>
+      <h1>Vanilla JavaScript</h1>
+      <p>i.e., JavaScript without any (UI) framework or library</p>
+    </div>
+  </header>
+    <p><a class="button" href="index.html">Go back</a></p>
 
     <div id="counter">
-      <button type="button" data-action="decrement">-1</button>
+      <button class="button" type="button" data-action="decrement">-1</button>
       <span id="value">0</span>
-      <button type="button" data-action="increment">+1</button>
+      <button class="button" type="button" data-action="increment">+1</button>
     </div>
 
     <script src="js/task-04.js" type="module"></script>
