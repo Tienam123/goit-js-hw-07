@@ -12,10 +12,11 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-
+//Определяем DOM елемент
 const galeryList = document.querySelector(".gallery");
-console.log(galeryList);
 
+
+//Выводим разметкуу
 const makeElements = (array, item) => {
   array.map(({ url, alt }) => {
     item.insertAdjacentHTML(

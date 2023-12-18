@@ -14,7 +14,7 @@ const deleteButtonRef = document.querySelector('[data-destroy]');
 // Регистрируем событие клик на кнопку создать елемент
 buttonRef.addEventListener('click', createBoxesAmount);
 // Регистрируем событие клик на кнопку удалить
-deleteButtonRef.addEventListener('click', destroyOnclick)
+deleteButtonRef.addEventListener('click', destroyBoxes)
 
 
 // Функция удаляет значения из блока #boxes
