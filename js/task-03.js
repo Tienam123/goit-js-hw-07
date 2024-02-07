@@ -1,28 +1,17 @@
-const images = [
-  {
-    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    alt: "White and Black Long Fur Cat",
-  },
-  {
-    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
-  },
-  {
-    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    alt: "Group of Horses Running",
-  },
-];
-//Определяем DOM елемент
-const galeryList = document.querySelector(".gallery");
+const inputRef = document.querySelector('#name-input');
+const nameOutputRef = document.querySelector('#name-output');
+inputRef.addEventListener("input", onFocusInput);
 
 
-//Выводим разметкуу
-const makeElements = (array, item) => {
-  array.map(({ url, alt }) => {
-    item.insertAdjacentHTML(
-      "beforeend",
-      `<li><img class="gallery__img" src="${url}" alt="${alt}" width="500" height="300" /></li>`
-    );
-  });
-};
-makeElements(images, galeryList);
+function onFocusInput(event) {
+    // Записываем в переменную значение пустой строки
+    let contentInput = '';
+    // Определяем в переменную значение которое было введено в инпуте
+    contentInput += event.target.value.trim();
+    // Выводим в ДОМ елемент значение переменной
+    nameOutputRef.textContent = contentInput
+    /*Проверяем если значение перемнной пустая строка , выводим начальное значение*/
+    if (contentInput === '') {
+        nameOutputRef.textContent = 'Anonymus'
+    }
+}

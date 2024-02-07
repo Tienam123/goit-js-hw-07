@@ -1,17 +1,17 @@
-const inputRef = document.querySelector('#name-input');
-const nameOutputRef = document.querySelector('#name-output');
-inputRef.addEventListener("input", onFocusInput);
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
+const buttonRef = document.querySelector('.change-color');
+const span = document.querySelector('.color');
 
-function onFocusInput(event) {
-    // Записываем в переменную значение пустой строки
-    let contentInput = '';
-    // Определяем в переменную значение которое было введено в инпуте
-    contentInput += event.target.value;
-    // Выводим в ДОМ елемент значение переменной
-    nameOutputRef.textContent = contentInput
-    /*Проверяем если значение перемнной пустая строка , выводим начальное значение*/
-    if (contentInput === '') {
-        nameOutputRef.textContent = 'Anonymus'
-    }
+// Добавляем слушатель события на кнопку
+buttonRef.addEventListener("click", onButtonChangeColor);
+
+// Инициализируем функцию для смены цвета
+function onButtonChangeColor() {
+document.body.style.backgroundColor = getRandomHexColor();
+span.textContent = getRandomHexColor();
 }

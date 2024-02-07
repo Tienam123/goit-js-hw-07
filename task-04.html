@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 4</title>
+    <title>Task 8</title>
     <link rel="stylesheet" href="css/common.css" />
     <style>
-      .button {
-        border-radius: 4px;
-        padding-left: 40px;
-        padding-right: 40px;
+      .login-form {
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
       }
-      #value {
-        margin-left: 50px;
-        margin-right: 50px;
+
+      .login-form label {
+        margin-bottom: 16px;
       }
-      #counter {
-        margin-top: 50px;
+
+      .login-form input,
+      .login-form button {
+        width: 100%;
+        padding: 4px;
+        font: inherit;
       }
     </style>
   </head>
@@ -31,11 +35,17 @@
   </header>
     <p><a class="button" href="index.html">Go back</a></p>
 
-    <div id="counter">
-      <button class="button" type="button" data-action="decrement">-1</button>
-      <span id="value">0</span>
-      <button class="button" type="button" data-action="increment">+1</button>
-    </div>
+    <form class="login-form">
+      <label>
+        Email
+        <input class="login-form__email" type="email" name="email" />
+      </label>
+      <label>
+        Password
+        <input class="login-form__password" type="password" name="password" />
+      </label>
+      <button class="button login-form__submit" type="submit">Login</button>
+    </form>
 
     <script src="js/task-04.js" type="module"></script>
   </body>

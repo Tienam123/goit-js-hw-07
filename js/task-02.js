@@ -1,20 +1,28 @@
-const ingredients = [
-  "Potatoes",
-  "Mushrooms",
-  "Garlic",
-  "Tomatos",
-  "Herbs",
-  "Condiments",
+const images = [
+  {
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
+  },
+  {
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+  },
+  {
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
+  },
 ];
-const ingredientsEl = document.querySelector("#ingredients");
+//Определяем DOM елемент
+const galeryList = document.querySelector(".gallery");
 
-function makeElements() {
-  return ingredients.map((el) => {
-    const liEl = document.createElement("li");
-    liEl.textContent = el;
-    liEl.className = "item update";
-    return liEl;
+
+//Выводим разметкуу
+const makeElements = (array, item) => {
+  array.map(({ url, alt }) => {
+    item.insertAdjacentHTML(
+      "beforeend",
+      `<li><img class="gallery__img" src="${url}" alt="${alt}" width="500" height="300" /></li>`
+    );
   });
-}
-//Выгружаем в DOM и распыляем массив
-ingredientsEl.append(...makeElements());
+};
+makeElements(images, galeryList);
